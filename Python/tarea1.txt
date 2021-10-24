@@ -1,0 +1,3 @@
+Pip list:  hace una lista de los paquetes instalados en el ambiente virtual.
+Deactivate: apaga el entorno virtual.
+Pip3 list: Lista de toso los paquetes
