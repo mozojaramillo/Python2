@@ -1,8 +1,9 @@
 class BankAccount:
     
-    def __init__(self, int_rate = 0, balance = 0):
+    def __init__(self,currency = "CLP", int_rate = 0, balance = 0):
         self.int_rate = int_rate
         self.balance = balance
+        self.currency = currency
     
     def deposit(self, amount):
         self.balance += amount
@@ -32,8 +33,18 @@ class usuario:
     def __init__(self, name, email):
         self.name = name
         self.email = email
-        self.account = BankAccount(int_rate=0.05, balance = 0)
+        self.accounts = []
 
+    def add_account(self, account):
+        self.accounts.append(account)
+
+        return self
+
+cuenta1 = BankAccount(0.05,100)
+cuenta2 = BankAccount("USD", 0.01, 10)
 
 Angel = usuario("Angel", "angel@gmail.com")
-Angel.account.deposit(100).display_account_info()
+Angel.add_account(cuenta1)
+Angel.add_account(cuenta2)
+
+Angel.accounts[0].deposit(300).display_account_info()
