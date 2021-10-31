@@ -23,10 +23,9 @@ class BankAccount:
 
 
     def yield_interest(self):
-        self.balance = self.balance * (1 + self.int_rate)
-        
+        self.balance = self.balance * (1 + self.int_rate)        
 
-        return selfclass BankAccount:
+        return self
     
     def __init__(self, int_rate = 0, balance = 0):
         self.int_rate = int_rate
