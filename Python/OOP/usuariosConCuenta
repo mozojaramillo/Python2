@@ -1,0 +1,63 @@
+class BankAccount:
+    
+    def __init__(self, int_rate = 0, balance = 0):
+        self.int_rate = int_rate
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+        print(self.balance)
+
+        return self
+    
+    def withdraw(self, amount):
+        self.balance -= amount
+        print(self.balance)
+
+        return self
+
+    def display_account_info(self):
+        print(f'Saldo: {self.balance}')
+
+        return self
+
+
+    def yield_interest(self):
+        self.balance = self.balance * (1 + self.int_rate)
+        
+
+        return selfclass BankAccount:
+    
+    def __init__(self, int_rate = 0, balance = 0):
+        self.int_rate = int_rate
+        self.balance = balance
+    
+    def deposit(self, amount):
+        self.balance += amount
+        print(self.balance)
+
+        return self
+    
+    def withdraw(self, amount):
+        self.balance -= amount
+        print(self.balance)
+
+        return self
+
+    def display_account_info(self):
+        print(f'Saldo: {self.balance}')
+
+        return self
+
+
+    def yield_interest(self):
+        self.balance = self.balance * (1 + self.int_rate)
+        
+
+        return self
+
+class usuario:
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
+        self.account = BankAccount(int_rate=0.05, balance = 0)
