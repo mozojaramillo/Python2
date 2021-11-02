@@ -1,7 +1,7 @@
 import unittest
 
 ############ Pregunta 1 #######################
-"""
+
 def reverseList(list):
     a = len(list)
     if a<= 1:
@@ -118,7 +118,7 @@ class factorialTest(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-"""
+
 
 ########## Pregunta 5 ############
 
