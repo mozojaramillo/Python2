@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/my_style.css') }}"
+    />
+    <!-- asocie un archivo javascript -->
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/my_script.js') }}"
+    ></script>
+    <!-- asocie una imagen -->
+    <img src="{{ url_for('static', filename='img/my_img.png') }}" />
     <title>Document</title>
   </head>
   <body>
     <h1>Hello Flask!</h1>
-
-    <h3>My Flask Template</h3>
-    <p>Phrase: {{ phrase }}</p>
-    <p>Times: {{ times }}</p>
-
-    {% for x in range(0,times): %}
-    <p>{{ phrase }}</p>
-    {% endfor %} {% if phrase == "hello" %}  
-    <p>The phrase says hello</p>
-    {% endif %}
   </body>
 </html>
